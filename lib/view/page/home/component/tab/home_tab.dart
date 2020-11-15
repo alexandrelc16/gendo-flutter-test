@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../../../core/controller/git_hub_controller.dart';
-import '../../../utils/media.dart';
+import '../../../../../core/controller/git_hub_controller.dart';
+import '../../../../utils/media.dart';
 import 'home_tab_repos.dart';
 import 'home_tab_starred.dart';
 

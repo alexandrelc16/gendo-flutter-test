@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../../../core/controller/git_hub_controller.dart';
-import '../../../widget/error.dart';
-import '../../../widget/loading.dart';
+import '../../../../../core/controller/git_hub_controller.dart';
+import '../../../../widget/error.dart';
+import '../../../../widget/loading.dart';
 import 'widget/home_list_tile_user_starred.dart';
 import 'widget/home_text_field_search.dart';
 

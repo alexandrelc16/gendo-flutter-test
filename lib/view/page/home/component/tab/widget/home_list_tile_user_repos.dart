@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../../../../../core/model/user_repos.dart';
-import '../../../../utils/media.dart';
-import '../../../../widget/icon_value.dart';
+import '../../../../../../core/model/user_repos.dart';
+import '../../../../../utils/media.dart';
+import '../../../../../widget/icon_value.dart';
 
 class HomeListTileUserRepos extends StatelessWidget {
   final UserRepos userRepos;
