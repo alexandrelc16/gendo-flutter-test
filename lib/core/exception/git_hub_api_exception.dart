@@ -1,0 +1,2 @@
+class GitHubApiException implements Exception {
+}
