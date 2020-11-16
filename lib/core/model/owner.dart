@@ -18,25 +18,26 @@ class Owner {
   String type;
   bool siteAdmin;
 
-  Owner(
-      {this.login,
-      this.id,
-      this.nodeId,
-      this.avatarUrl,
-      this.gravatarId,
-      this.url,
-      this.htmlUrl,
-      this.followersUrl,
-      this.followingUrl,
-      this.gistsUrl,
-      this.starredUrl,
-      this.subscriptionsUrl,
-      this.organizationsUrl,
-      this.reposUrl,
-      this.eventsUrl,
-      this.receivedEventsUrl,
-      this.type,
-      this.siteAdmin});
+  Owner({
+    this.login,
+    this.id,
+    this.nodeId,
+    this.avatarUrl,
+    this.gravatarId,
+    this.url,
+    this.htmlUrl,
+    this.followersUrl,
+    this.followingUrl,
+    this.gistsUrl,
+    this.starredUrl,
+    this.subscriptionsUrl,
+    this.organizationsUrl,
+    this.reposUrl,
+    this.eventsUrl,
+    this.receivedEventsUrl,
+    this.type,
+    this.siteAdmin,
+  });
 
   Owner.fromJson(Map<String, dynamic> json) {
     login = json['login'];
@@ -57,5 +58,28 @@ class Owner {
     receivedEventsUrl = json['received_events_url'];
     type = json['type'];
     siteAdmin = json['site_admin'];
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'login': login,
+      'id': id,
+      'nodeId': nodeId,
+      'avatarUrl': avatarUrl,
+      'gravatarId': gravatarId,
+      'url': url,
+      'htmlUrl': htmlUrl,
+      'followersUrl': followersUrl,
+      'followingUrl': followingUrl,
+      'gistsUrl': gistsUrl,
+      'starredUrl': starredUrl,
+      'subscriptionsUrl': subscriptionsUrl,
+      'organizationsUrl': organizationsUrl,
+      'reposUrl': reposUrl,
+      'eventsUrl': eventsUrl,
+      'receivedEventsUrl': receivedEventsUrl,
+      'type': type,
+      'siteAdmin': siteAdmin,
+    };
   }
 }

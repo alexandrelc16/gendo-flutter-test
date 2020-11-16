@@ -5,7 +5,13 @@ class License {
   String url;
   String nodeId;
 
-  License({this.key, this.name, this.spdxId, this.url, this.nodeId});
+  License({
+    this.key,
+    this.name,
+    this.spdxId,
+    this.url,
+    this.nodeId,
+  });
 
   License.fromJson(Map<String, dynamic> json) {
     key = json['key'];
@@ -13,5 +19,15 @@ class License {
     spdxId = json['spdx_id'];
     url = json['url'];
     nodeId = json['node_id'];
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'key': key,
+      'name': name,
+      'spdxId': spdxId,
+      'url': url,
+      'nodeId': nodeId,
+    };
   }
 }
