@@ -26,3 +26,10 @@ Alguns pontos extras que foram aplicados no app:
 4. Launcher icon;
 5. Loading animation;
 6. O projeto está configurado com o workflow do GitHub. Em cada push, é feito análise, teste e compilação.
+
+## Screenshots
+![splash](screenshots/splash.png?raw=true "Splash")
+![medium](screenshots/mediumDevice.png?raw=true "Medium")
+![mediumDark](screenshots/mediumDeviceDark.png?raw=true "Medium Dark")
+![larger](screenshots/largerDevice.png?raw=true "Larger")
+![test](screenshots/test.jpeg?raw=true "Test")
