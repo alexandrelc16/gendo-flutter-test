@@ -10,10 +10,16 @@ Após instalar o Flutter e rodar o emulador, basta baixar o repositório em seu 
 ## Teste
 Foi criado um diretório scripts na raiz do projeto que está configurado pra rodar os testes e gerar um arquivo de cobertura de código. Para executar o script, entre no diretório scripts, dê permissão de execução ao arquivo e o execute. Após ser executado, será gerado um diretório chamado coverage com as informações de cobertura.
 
+> Caso esteja utilizando Linux, será necessário instalar o pacote LCOV:
+>
+> Fedora: ```dnf install lcov```
+>
+> Ubuntu: ```apt install lcov```
+
 Foram criados testes dos controllers, repositories, exceptions e models, atingindo uma cobertura de 100% para esses casos.
 
 ## Extras
-Alguns pontos extras que apliquei no app:
+Alguns pontos extras que foram aplicados no app:
 1. Dark mode, a partir do modo escolhido no SO do usuário;
 2. Responsive;
 3. Splash screen;
