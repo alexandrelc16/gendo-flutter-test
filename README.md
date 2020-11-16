@@ -1,38 +1,22 @@
 # Teste para vaga dev. Flutter na Gendo
-Este repositório tem como fim testar os candidatos para vaga dev. Flutter na empresa [Gendo](https://gendo.com.br).
-> Para esta vaga buscamos alguém apaixonado por mobile e atento aos detalhes!
 
+## Instruções para instalação e execução
+Após instalar o Flutter e rodar o emulador, basta baixar o repositório em seu workspace e na raíz do app, executar:
 
-## Instruções Básicas
-1. Faça um fork deste repositório
-2. Implemente o layout de forma que fique fiel aos fontes mobile anexos neste teste
-3. Atenção com espaçamentos e tamanhos de fonte
-4. Qualquer contribuição para melhorar o resultado será bem vinda!
-5. O usuário do GitHub utilizado no exemplo pode ser qualquer um de sua escolha
-6. Ao finalizar, atualize o README.md no seu repositório com as instruções para instalar e executar sua entrega
+```flutter pub get```
 
-## Desafio (opcional para Junior), a página deve:
-1. Carregar os dados de forma dinâmica utilizando a [API do GitHub](https://developer.github.com/v3/)
-2. Carregar os repositórios do usuário inicialmente
-3. Carregar os favoritos do usuário ao acessar a tab **Starred**
-4. Fazer uma busca ao digitar e fazer o submit com "Enter"
+```flutter run```
 
-## O que esperamos no teste
-* Um código Dart organizado com nomes de variáveis e funções auto explicativas
-* Uma boa doc. para compilar o projeto corretamente para Andorid e iOS
+## Teste
+Foi criado um diretório scripts na raiz do projeto que está configurado pra rodar os testes e gerar um arquivo de cobertura de código. Para executar o script, entre no diretório scripts, dê permissão de execução ao arquivo e o execute. Após ser executado, será gerado um diretório chamado coverage com as informações de cobertura.
 
-## Stack
-### Preferível
-* Dart/Flutter
+Foram criados testes dos controllers, repositories, exceptions e models, atingindo uma cobertura de 100% para esses casos.
 
-## Material
-Todo o layout está hospedado no Zeplin neste link: https://zpl.io/25q7DKo
-
-### Como acessar o Zeplin
-1. Acesse o [link do projeto](https://zpl.io/25q7DKo)
-2. Faça Login digitando `testesuperagendador` nos campos de **usuário** e **senha**
-3. Abra o projeto **superagendador-front-end-test**
-4. Acesse as telas, clique nos elementos e veja as epecificações no lado direito da tela
-
-## Envio do teste
-1. Suba o repositório no seu Github e envie o link com o assunto: **Teste Dev. Flutter** para Juliano Baladão [jbaladao@gendo.com.br](mailto:jbaladao@gendo.com.br)
+## Extras
+Alguns pontos extras que apliquei no app:
+1. Dark mode, a partir do modo escolhido no SO do usuário;
+2. Responsive;
+3. Splash screen;
+4. Launcher icon;
+5. Loading animation;
+6. O projeto está configurado com o workflow do GitHub. Em cada push, é feito análise, teste e compilação.
