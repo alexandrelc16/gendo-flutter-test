@@ -6,10 +6,14 @@ import '../model/user_repos.dart';
 import '../model/user_starred.dart';
 import '../repository/git_hub_repository.dart';
 
-
 class GitHubController extends ChangeNotifier {
+  GitHubController({
+    @required this.repository,
+  }) : assert(repository != null);
+
+  final GitHubRepository repository;
+
   bool isLoading;
-  GitHubRepository gitHubRepository = GitHubRepository();
   User user;
   List<UserRepos> userRepos = [];
   List<UserStarred> userStarred = [];
@@ -20,7 +24,7 @@ class GitHubController extends ChangeNotifier {
   Future<void> getUser() async {
     _startLoading();
     try {
-      user = await gitHubRepository.getUserData();
+      user = await repository.getUserData();
     } on Exception catch (e) {
       errorMsg = getMessageByException(e);
     } finally {
@@ -31,7 +35,7 @@ class GitHubController extends ChangeNotifier {
   Future<void> getUserRepos() async {
     _startLoading();
     try {
-      userRepos = await gitHubRepository.getUserRepos();
+      userRepos = await repository.getUserRepos();
       listUserReposFiltered = [...userRepos];
     } on Exception catch (e) {
       errorMsg = getMessageByException(e);
@@ -43,7 +47,7 @@ class GitHubController extends ChangeNotifier {
   Future<void> getUserStarred() async {
     _startLoading();
     try {
-      userStarred = await gitHubRepository.getUserStarred();
+      userStarred = await repository.getUserStarred();
       listUserStarredFiltered = [...userStarred];
     } on Exception catch (e) {
       errorMsg = getMessageByException(e);
@@ -56,7 +60,7 @@ class GitHubController extends ChangeNotifier {
     final listUserReposTemp = <UserRepos>[];
     listUserReposTemp.addAll(userRepos);
     listUserReposFiltered.clear();
-    
+
     if (query.isNotEmpty) {
       final listUserReposFilteredTemp = <UserRepos>[];
       for (var item in listUserReposTemp) {
